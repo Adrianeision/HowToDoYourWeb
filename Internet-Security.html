@@ -7,7 +7,7 @@
       <body>
       	<style>
 	body {
-		background-color: rgb(152, 255, 143);
+		background-color: rgb(160, 255, 148);
 		font-weight: normal;
 		font-size: 18px;
 		font-family: sans-serif;
@@ -21,21 +21,13 @@
 		text-decoration: underline overline green;
 	}
 	h2 {
-		color:rgb(255,140,0);
+		color:green;
 		font-weight: 500;
 		font-family: cursive;
 		font-size: 2.2em;
 		text-decoration: underline;
 		text-indent: 10mm;
 		letter-spacing: 1px;
-	}
-	h3 {
-		color: rgb(15, 150, 0);
-		font-variant: small-caps;
-		font-family: monospace;
-		font-size: 1.5em;
-		text-indent: 6mm;
-		text-decoration: underline dotted;
 	}
 	p {
 		font-weight: normal;
@@ -47,7 +39,7 @@
 		border: 2px dashed green;
 	}
 	strong {
-		color:rgb(12, 140, 0);
+		color:rgb(11, 105, 0);
 	}
 	ul {
 		background: rgb(187, 252, 182);
@@ -91,7 +83,7 @@
                 Similar to the way that speaking the same language simplifies communication between two people, network protocols make it possible for devices to interact with each other because of predetermined rules built into devices’ software and hardware. Neither local area networks (LAN) nor wide area networks (WAN) could function the way they do today without the use of network protocols.<br>
                 Network protocols take large-scale processes and break them down into small, specific tasks or functions. This occurs at every level of the network, and each function must cooperate at each level to complete the larger task at hand. The term protocol suite refers to a set of smaller network protocols working in conjunction with each other.<br>
                 Network protocols are typically created according to industry standard by various networking or information technology organizations.<br>
-                The following groups have defined and published different network protocols:<br>
+		      The following groups have defined and published different network protocols:</p>
               <ul>
                   <li><strong>The Institute of Electrical and Electronics Engineers</strong> (IEEE)</li>
                   <li><strong>The Internet Engineering Task Force</strong> (IETF)</li>
@@ -99,17 +91,17 @@
                   <li><strong>The International Telecommunications Union</strong> (ITU)</li>
                   <li><strong>The World Wide Web Consortium</strong> (W3C)</li>
               </ul>
-                  While network protocol models generally work in similar ways, each protocol is unique and operates in the specific way detailed by the organization that created it.</p>  
+                  <p>While network protocol models generally work in similar ways, each protocol is unique and operates in the specific way detailed by the organization that created it.</p>  
             <h2>Digital certificates and certificate authorities</h2>
                  <p>Digital certificates are issued by trusted parties, called certificate authorities, to verify the identity of an entity, such as a client or server.<br>
                      The digital certificate serves <strong>two purposes</strong>: it verifies the owner's identity and it makes the owner's public key available. It is issued with an expiration date, after which it is no longer guaranteed by the certificate authority (CA).<br>
                     To obtain a digital certificate, you send a request to the CA of your choice, such as Verisign, or RSA. The request includes your distinguished name, your public key, and your signature. A distinguished name (DN) is a unique identifier for each user or host for which you are applying for a certificate. The CA checks your signature using your public key and performs some level of verification of your identity (this varies with different CAs). After verification, the CA sends you a signed digital certificate that contains your distinguished name, your public key, the CA's distinguished name, and the signature of the certificate authority. You store this signed certificate in your key database.<br>
-                    When you send this certificate to a receiver, the receiver performs two steps to verify your identity:<br>
+                    When you send this certificate to a receiver, the receiver performs two steps to verify your identity:</p>
                      <ol>
                      <li>Uses your public key that comes with the certificate to check your digital signature.</li>
                      <li>Verifies that the CA that issued your certificate is legitimate and trustworthy. To do this, the receiver needs the public key of the CA. The receiver might already hold an assured copy of the public key of the CA in their key database, but if not, the receiver must acquire an additional digital certificate to obtain the public key of the CA. This certificate might in turn depend on the digital certificate of another CA; there might be a hierarchy of certificates issued by multiple CAs, each depending on the validity of the next. Eventually, however, the receiver needs the public key of the root CA. The root CA is the CA at the top of the hierarchy. To trust the validity of the digital certificate of the root CA, the public-key user must receive that digital certificate in a secure manner, such as through a download from an authenticated server, or with preloaded software received from a reliable source, or on a securely delivered diskette.</li>    
                      </ol>
-                    Many applications that send a digital certificate to a receiver send not just their own certificate, but also all of the CA digital certificates necessary to verify the hierarchy of certificates up to the root CA certificate.<br>
+                    <p>Many applications that send a digital certificate to a receiver send not just their own certificate, but also all of the CA digital certificates necessary to verify the hierarchy of certificates up to the root CA certificate.<br>
                     For a digital certificate to be entirely trustworthy, the owner of the digital certificate must have carefully protected their private key, for example, by encrypting it on their computer's hard drive. If their private key has been compromised, an imposter could misuse their digital certificate.<br>
                     You can use self-signed digital certificates for testing purposes. A self-signed digital certificate contains your distinguished name, your public key, and your signature.</p>
         </body>
